@@ -16,7 +16,7 @@ public class DepartmentController {
 	
 	@Autowired
 	DepartmentDao ddao;
-	
+	//test for github
 	@GetMapping(value="/department")
 	public List<Department> getAllDepartment(){
 		return ddao.findAll(); 
