@@ -47,6 +47,7 @@ public class EmployeeController {
 	@PostMapping(value="/employee",consumes = "application/json", produces = "application/json")
 	public Employee addEmployee(@RequestBody Employee emp) {
 				
+		System.out.println(emp.toString());
 		 edao.save(emp);
 		 return emp;
 		
@@ -73,9 +74,9 @@ public class EmployeeController {
 		
 	}
 	
-	@DeleteMapping("/employee/{id}")
-	public String deleteEmployee(@PathVariable("id") int id) {
-		
+	@DeleteMapping("/employee")
+	public String deleteEmployee(@RequestParam("id") int id) {
+		System.out.println(id);
 		edao.deleteById(id);
 		return "Deleted";
 	}

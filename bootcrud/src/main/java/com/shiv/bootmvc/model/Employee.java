@@ -44,12 +44,7 @@ public class Employee {
 
 
 	
-	public Date getHireDate() {
-		return hireDate;
-	}
-	public void setHireDate(Date hire_date) {
-		this.hireDate = hireDate;
-	}
+	
 
 
 	
@@ -57,15 +52,14 @@ public class Employee {
 //	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",shape=Shape.STRING)
 //	@Column(name="hire_date")
 //	String hire_date;
+
 	
-	
-//	public String getHire_date() {
-//		return hire_date;
-//	}
-//	public void setHire_date(String hire_date) {
-//		this.hire_date = hire_date;
-//	}	
-	
+	public Date getHireDate() {
+		return hireDate;
+	}
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
+	}
 	public int getId() {
 		return id;
 	}
@@ -90,11 +84,13 @@ public class Employee {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
+				+ ", hireDate=" + hireDate + ", department=" + department + "]";
 	}
+	
+	
+	
 	
 }
